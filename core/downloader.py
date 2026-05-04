@@ -54,7 +54,14 @@ def descargar_imagenes(
 
         metadata = ee_service.get_image_metadata(image)
 
-        fecha = metadata["date"] if metadata["date"] else f"img_{i}"
+        if metadata["date"]:
+            try:
+                fecha_dt = datetime.strptime(metadata["date"], "%d-%m-%Y")
+                fecha = fecha_dt.strftime("%Y-%m-%d")
+            except:
+                fecha = metadata["date"]
+        else:
+            fecha = f"img_{i}"
 
         # 👉 Sanitizar fecha (clave para Windows)
         fecha_safe = fecha.replace("/", "-").replace(":", "-")
