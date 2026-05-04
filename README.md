@@ -45,14 +45,14 @@ Aplicación para descarga de imágenes satelitales.
 ## 📁 Estructura del proyecto
 
 AgroSatelital/
-│
-├── core/ # Lógica principal (procesamiento, análisis)
-├── Utils/ # Funciones auxiliares
-├── services/ # Servicios externos (Earth Engine, storage)
-├── Ui/ # Interfaz gráfica
-├── Configuracion/ # Configuración del sistema
-├── Data/ # Datos (no versionados idealmente)
-├── main.py # Punto de entrada
+
+- core/ # Lógica principal (procesamiento, análisis)
+- Utils/ # Funciones auxiliares
+- services/ # Servicios externos (Earth Engine, storage)
+- Ui/ # Interfaz gráfica
+- Configuracion/ # Configuración del sistema
+- Data/ # Datos (no versionados idealmente)
+- main.py # Punto de entrada
 
 
 ## ▶️ Cómo ejecutar
